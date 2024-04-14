@@ -2,6 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 import { getStories, insertStory } from './storydb/db';
+import './style.css'
+
+
 function Page() {
     const [texthin , setTexthin] = useState("");
     const [stories , setStories] = useState([]);
@@ -46,7 +49,7 @@ function Page() {
                         setTexthin(event.currentTarget.value)
                     }  
 
-                }} className='bg-[#121111] rounded-2xl p-4 text-' rows={24} cols={100} ></textarea>
+                }} rows={24} cols={130} ></textarea>
             </div>
         </div>
         <div className="footer overflow-x-hidden flex p-6  justify-center gap-10 ">
@@ -58,7 +61,7 @@ function Page() {
                 // console.log(cnt)
                 alert(`count of words is ${cnt.length}`)
             }}>Show Count</div>
-            <div className="btn-database  bg-blue-900 p-2.5 pl-5 pr-5 rounded-2xl"  ><a href='https://deadlock47.github.io/typer/' target = "kl;k;k">Write In Hindi</a></div>
+            <div className="btn-database  bg-blue-900 p-2.5 pl-5 pr-5 rounded-2xl"  ><Link href='/heg' >Write In Hindi</Link></div>
         </div>
     </div>
   )
